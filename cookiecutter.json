@@ -1,0 +1,10 @@
+{
+  "company_name": "My Company",
+  "project_name": "My Project",
+  "project_jira": "JITA",
+  "build_server": "hostname",
+  "project_repo": "https://github.com/{{cookiecutter.project_name|lower}}",
+  "_copy_without_render": [
+  "Build/{{cookiecutter.project_name|lower}}_doNotEdit.txt"
+  ]
+}
