@@ -1,0 +1,17 @@
+# A set of rules to control which sourcecode files
+# should not be touched by the codeformat package
+files_exclude:
+  - filepath_regex: '' # Regex of excluded files, useful for folders
+  - filename_match: # List of files to exclude
+      - template_header.h
+      - template_source.c
+
+# An ordered set of rules to format the sourcecode file.
+pipeline:
+  - text:
+    - builtin: spaces
+    - builtin: comments
+  - files:
+    - builtin: uncrustify-mrvl-ssdfw
+      params:
+        config_filepath: uncrustify.cfg
